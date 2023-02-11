@@ -207,7 +207,7 @@ knitr::include_graphics('img/Capture_7.JPG')
 2. Spectral signatures of Landsat satellite images can also apply with terrestrial lidar to quantify forest structure attributes with three-dimensional point data.
 ---
 ##Refernce List
-```{r}
+```{r include=FALSE}
 PrintBibliography(myBib, start = 1, end = 7)
 ```
 
