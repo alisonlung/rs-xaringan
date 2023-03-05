@@ -13,7 +13,8 @@ output:
       countIncrementalSlides: false
 
 ---
-```{r include=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(knitcitations)
 library(RefManageR)
 BibOptions(check.entries = FALSE,
            bib.style = "authoryear",
@@ -66,19 +67,19 @@ knitr::include_graphics('img/Landsat 8 band designations.jpg')
 
 - Distribute standard LDCM data products to  users on a nondiscriminatory and no cost basis
 ###Advantages
-1. Open availability under Landsat Open Data Policy
+1. Open availability under Landsat Open Data Policy `r Citep(myBib,"zhuBenefitsFreeOpen2019")`
 <br/>
 
-2. Improved imaging capacity for cirrus clouds detection, coastal zone observation and thermal imaging
+2. Improved imaging capacity for cirrus clouds detection, coastal zone observation and thermal imaging `r Citep(myBib,"lovelandLandsatPlansReality2016")`
 <br/>
 
-3. High acquisition rate benefits research in persistently cloudy areas
+3. High acquisition rate benefits research in persistently cloudy areas `r Citep(myBib,"lovelandLandsatPlansReality2016")`
 <br/>
 
-4. Radiometrically and geometrically superior than previous Landsat missions due to improvement in:
+4. Radiometrically and geometrically superior than previous Landsat missions due to improvement in `r Citep(myBib,"lovelandLandsatPlansReality2016")`:
   - Signal-to-noise ratios
   - Bandwidth properties
-  - Geometric and geodetic accuracy
+  - Geometric and geodetic accuracy           
   
 ---
 ###Applications of Landsat 8
@@ -90,6 +91,8 @@ knitr::include_graphics('img/Capture.JPG')
 
 ```
 <br/>
+<font size="2">`r Citep(myBib,"Anders2016")`</font>
+<br/>
 <br/>
 <br/>
 2. Soil Moisture
@@ -97,6 +100,9 @@ knitr::include_graphics('img/Capture.JPG')
 knitr::include_graphics('img/Capture_2.JPG')
 
 ```
+<br/>
+<font size="2">`r Citep(myBib,"zhangSoilMoistureContent2022")` </font>
+<br/>
 ]
 .right-column[
 - Use radiative transfer model inversion approach with bands 1-4 to map shallow bathymetry in Canada
@@ -122,6 +128,8 @@ knitr::include_graphics('img/Capture_3.JPG')
 
 ```
 <br/>
+<font size="2">`r Citep(myBib,"Syam'ani2020")`</font>
+<br/>
 <br/>
 <br/>
 <br/>
@@ -130,6 +138,9 @@ knitr::include_graphics('img/Capture_3.JPG')
 knitr::include_graphics('img/Capture_4.JPG')
 
 ```
+<br/>
+<font size="2">`r Citep(myBib,"Prastyani2018")`</font>
+<br/>
 ]
 .right-column[
 - Enhance spectral value of OLI imagery by reducing the presence of aerosol particles using band 1
@@ -155,7 +166,7 @@ knitr::include_graphics('img/Capture_5.JPG')
 
 ```
 <br/>
-<br/>
+<font size="2">`r Citep(myBib,"Ren2015")`</font>
 <br/>
 <br/>
 2. Geothermal Anomalies 
@@ -163,6 +174,9 @@ knitr::include_graphics('img/Capture_5.JPG')
 knitr::include_graphics('img/Capture_6.JPG')
 
 ```
+<br/>
+<font size="2">`r Citep(myBib,"Chao2022")`</font>
+<br/>
 ]
 .right-column[
 - Estimate atmospheric water vapor from TIRS data of Landsat 8 and validated with 42 ground sites
@@ -187,7 +201,7 @@ knitr::include_graphics('img/Capture_6.JPG')
 
 3. User should identify the characteristics and advantages of sensor by understanding the types of bands, wavelength and spatial resolution. Detailed discussion from publications may also provide further information on requirements, specifications, design considerations, and performance in pre- and post-launch.
 
-.pull-left[Design of Landsat 8 OLI (left) and TIRS (right)  ( , )]
+.pull-left[<br/><br/><br/><font size="3">Design of Landsat 8 OLI (left) and TIRS (right)`r Citep(myBib,"ironsNextLandsatSatellite2012")`</font>]
 .pull-right[
 ```{r echo=FALSE, out.width='90%', fig.align='right'}
 knitr::include_graphics('img/Capture_7.JPG')
@@ -202,15 +216,20 @@ knitr::include_graphics('img/Capture_7.JPG')
 2. Integrate the application of bands by adopting available spatial indices with band math, or based on available indices to develop a new formula with other factors (e.g. Radiometric Enhancement with band 1)
 
 ####Future Applications
-1. Medium spatial resolution datasets can be combined with very high-resolution (VHR) multispectral imageries due to their larger spatial coverage. An example is the application of Landsat data with VHR (e.g. WV-2, IKONOS and GeoEye-1) in the generation of high spatial resolution fractional cover maps for larger geographical areas.
+1. Medium spatial resolution datasets can be combined with very high-resolution (VHR) multispectral imageries due to their larger spatial coverage. An example is the application of Landsat data with VHR (e.g. WV-2, IKONOS and GeoEye-1) in the generation of high spatial resolution fractional cover maps for larger geographical areas `r Citep(myBib,"Khare2019")`.
 
-2. Spectral signatures of Landsat satellite images can also apply with terrestrial lidar to quantify forest structure attributes with three-dimensional point data.
+2. Spectral signatures of Landsat satellite images can also apply with terrestrial lidar to quantify forest structure attributes with three-dimensional point data`r Citep(myBib,"Kato2019")`.
 ---
-##Refernce List
-```{r include=FALSE}
-PrintBibliography(myBib, start = 1, end = 7)
+##References
+```{r results='asis', echo=FALSE, message=FALSE}
+PrintBibliography(myBib, start = 1, end = 6)
 ```
 
+---
+##References
+```{r results='asis', echo=FALSE, message=FALSE}
+PrintBibliography(myBib, start = 7, end = 11)
+```
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
